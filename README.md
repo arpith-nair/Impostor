@@ -13,7 +13,7 @@ Test by running file from the python folder within the python application.
 
 To edit word bank,open file in a Python editor.
 New word pairs must be added in format:
-("Word","Hint") and add into 'data'.
+("Word","Hint") and add into one of the word lists or create your own.
 Save file and move to calculator as stated above.
 
 Enjoy!
