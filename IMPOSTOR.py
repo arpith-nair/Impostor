@@ -9,23 +9,18 @@ def sample(population, k):
     return result
 print("Welcome to IMPOSTOR!")
 print("Number of Players?")
-print("4-10 players")
+print("3-10 players")
 num_players = int(input())
-if num_players < 4 or num_players > 10:
-    print("Can not start")
-else:
-    if num_players <= 5:
-        impcount = 1
-    elif num_players <= 9:
-        impcount = 2
-    else:
-        impcount = 3
+impcount = int(input("Number of Impostors? "))
+if impcount > num_players // 2:
+    print("Too many impostors!")
+elif impcount <= num_players // 2:
     print("Game starting with")
     print(num_players - impcount, "civilians and")
     print(impcount, "impostors.")
     names = []
     for i in range(num_players):
-        print("Player", i + 1, "Name:")
+        print("Player", i + 1, "Name?")
         names.append(input())
     imps = sample(range(num_players), impcount)
     data = [
@@ -43,14 +38,14 @@ else:
         ("Soup", "Broth"), ("Pancakes", "Maple"), ("Waffles", "Grid"),
         ("Curry", "Spicy"), ("Steak", "Grill"), ("Fries", "Potato"),
         ("Hotdog", "Sausage"), ("Bagel", "Hole"), ("Omelette", "Egg"),
-        ("Lasagna", "Layers"), ("Risotto", "Creamy"), ("Shepherd’s Pie", "Mash"),
+        ("Lasagna", "Layers"), ("Risotto", "Creamy"), ("Shepherd   s Pie", "Mash"),
         ("Samosa", "Triangle"), ("Falafel", "Chickpea"), ("Apple (company)", "iPhone"),
         ("Samsung", "Galaxy"), ("Microsoft", "Windows"), ("Google", "Search"),
         ("Sony", "Play"), ("Dell", "Laptop"), ("HP", "Printer"), ("Lenovo", "Think"),
         ("Intel", "Chip"), ("Nvidia", "Graphics"), ("Amazon", "Prime"),
         ("Huawei", "Phone"), ("Nike", "Swoosh"), ("Adidas", "Three"),
         ("Puma", "Cat"), ("Gucci", "Belt"), ("Louis Vuitton", "Bag"),
-        ("H&M", "Affordable"), ("Zara", "Fashion"), ("Levi’s", "Jeans"),
+        ("H&M", "Affordable"), ("Zara", "Fashion"), ("Levi   s", "Jeans"),
         ("Versace", "Luxury"), ("Prada", "Designer"), ("Ralph Lauren", "Polo"),
         ("Supreme", "Logo"), ("Champion", "Sports"), ("Tesla", "Electric"),
         ("BMW", "Bavaria"), ("Mercedes", "Star"), ("Toyota", "Reliable"),
@@ -61,7 +56,7 @@ else:
         ("Economics", "Money"), ("Press conference", "Speaker"),
         ("Traffic light", "Intersection"), ("Washing machine", "Laundry"),
         ("Window sill", "Sunlight"), ("Clock", "Time"), ("Chair", "Table"),
-        ("Sofa", "Lamp"), ("Mirror", "Curtains"), ("Rug", "Refrigerator"),
+        ("Sofa", "Lamp"), ("Mirror", "Curtains"), ("Frozen", "Refrigerator"),
         ("Oven", "Microwave"), ("Earbuds", "Music"), ("Headphones", "Sound"),
         ("Wallet", "Cash"), ("Keys", "Unlock"), ("Sunglasses", "Shades"),
         ("Watch", "Timepiece"), ("Backpack", "Bag"), ("Notebook", "Write"),
@@ -85,9 +80,9 @@ else:
         print("Pass to",
                names[i])
         while True:
-            ready = input("Press + \n"
+            ready = input("Press - then EXE \n"
             "When ready:")
-            if ready == "+":
+            if ready == "-":
                 break
         if i in imps:
             print("You are the")
@@ -101,10 +96,20 @@ else:
             print(word)
         while True:
             cont = input("Memorised?\n"
-            "Press + \n"
+            "Press - then EXE \n"
             "to continue:")
-            if cont == "+":
+            if cont == "-":
                 print("\n" * 10)
                 break
-    print("All roles assigned. Begin the game!")
-    # By Arpith Nair 27/10/2025
+    print("All roles assigned.\n"
+    "Begin game!")
+    player_start=random.choice(names)
+    print("Player ",player_start,"starts!")
+    print("Reveal impostor? \n"
+    "Press - then EXE when ready")
+    if input() == "-":  
+        for n in imps:
+            print("Impostor:",names[n])
+
+#By Arpith Nair
+#05/11/2025
