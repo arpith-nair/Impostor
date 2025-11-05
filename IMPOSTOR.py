@@ -310,9 +310,9 @@ elif impcount <= num_players // 2:
         print("Pass to",
                names[i])
         while True:
-            ready = input("Press = then EXE \n"
+            ready = input("Press - then EXE \n"
             "When ready:")
-            if ready == "=":
+            if ready == "-":
                 break
         if i in imps:
             print("You are the")
@@ -326,9 +326,9 @@ elif impcount <= num_players // 2:
             print(word)
         while True:
             cont = input("Memorised?\n"
-            "Press = then EXE \n"
+            "Press - then EXE \n"
             "to continue:")
-            if cont == "=":
+            if cont == "-":
                 print("\n" * 10)
                 break
     print("All roles assigned.\n"
@@ -336,8 +336,8 @@ elif impcount <= num_players // 2:
     player_start=random.choice(names)
     print(player_start,"starts!")
     print("Reveal impostor? \n"
-    "Press = then EXE when ready")
-    if input() == "=":  
+    "Press - then EXE when ready")
+    if input() == "-":  
         for n in imps:
             print("Impostor:",names[n])
 #By Arpith Nair
