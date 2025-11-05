@@ -337,7 +337,7 @@ elif impcount <= num_players // 2:
     print(player_start,"starts!")
     print("Reveal impostor? \n"
     "Press - then EXE\n" \
-    " when ready")
+    "When ready")
     if input() == "-":  
         for n in imps:
             print("Impostor:",names[n])
