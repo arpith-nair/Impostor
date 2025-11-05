@@ -11,7 +11,8 @@ print("Welcome to IMPOSTOR!")
 print("Number of Players?")
 print("3-10 players")
 num_players = int(input())
-impcount = int(input("Number of Impostors? "))
+impcount = int(input("How Many\n"
+"Impostors?"))
 if impcount > num_players // 2:
     print("Too many impostors!")
 elif impcount <= num_players // 2:
@@ -294,7 +295,7 @@ elif impcount <= num_players // 2:
     print("3 - Activities")
     print("4 - School")
     print("5 - Holidays")
-    choice = input("Enter the number of your choice: ").strip()
+    choice = input("Option:").strip()
     if choice in datasets:
         data = datasets[choice]   
         word, hint = random.choice(data)
@@ -309,9 +310,9 @@ elif impcount <= num_players // 2:
         print("Pass to",
                names[i])
         while True:
-            ready = input("Press - then EXE \n"
+            ready = input("Press = then EXE \n"
             "When ready:")
-            if ready == "-":
+            if ready == "=":
                 break
         if i in imps:
             print("You are the")
@@ -325,18 +326,18 @@ elif impcount <= num_players // 2:
             print(word)
         while True:
             cont = input("Memorised?\n"
-            "Press - then EXE \n"
+            "Press = then EXE \n"
             "to continue:")
-            if cont == "-":
+            if cont == "=":
                 print("\n" * 10)
                 break
     print("All roles assigned.\n"
     "Begin game!")
     player_start=random.choice(names)
-    print("Player ",player_start,"starts!")
+    print(player_start,"starts!")
     print("Reveal impostor? \n"
-    "Press - then EXE when ready")
-    if input() == "-":  
+    "Press = then EXE when ready")
+    if input() == "=":  
         for n in imps:
             print("Impostor:",names[n])
 #By Arpith Nair
