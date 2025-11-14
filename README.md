@@ -1,5 +1,5 @@
 # Impostor
-The popular game Impostor made to run on CASIO fx-CG50. Originally made for Python but runs on Micropython as required for the calculator. Features 250 words and 250 hint words. Comes with 5 word banks(places,items,activities,school,holidays). Word banks can be customised.
+The popular game Impostor made to run on CASIO fx-CG50. Originally made for Python but runs on Micropython as required for the calculator. Features 375 words and 375 hint words. Comes with 5 word banks(places,items,activities,school,miscellaneous). Word banks can be customised.
 
 DOWNLOAD INSTRUCTIONS:
 Download Impostor.py onto a device with a USB port.
